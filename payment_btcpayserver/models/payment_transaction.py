@@ -89,7 +89,6 @@ class PaymentTransaction(models.Model):
         """
         tx = self._get_tx_from_notification_data(provider_code, notification_data)
         tx._process_notification_data(notification_data)
-        tx._execute_callback()
         return tx
 
     def _process_notification_data(self, notification_data):
